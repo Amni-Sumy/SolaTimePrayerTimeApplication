@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SolatTime - My Reminders</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav>
+    <strong>SolatTime</strong>
+    <a href="index.html">Prayer Times</a>
+    <a href="reminders.html" class="active">My Reminders</a>
+  </nav>
+
+  <main>
+
+    <!-- Form: used for both Create and Update -->
+    <section class="card">
+      <h2 id="formTitle">Add Reminder</h2>
+      <form id="reminderForm">
+        <label for="titleInput">Activity *</label>
+        <input type="text" id="titleInput" maxlength="60" placeholder="e.g. Read Surah Al-Mulk">
+
+        <label for="prayerSelect">Related prayer time</label>
+        <select id="prayerSelect">
+          <option value="Fajr">Fajr</option>
+          <option value="Sunrise">Sunrise</option>
+          <option value="Dhuhr">Dhuhr</option>
+          <option value="Asr">Asr</option>
+          <option value="Maghrib" selected>Maghrib</option>
+          <option value="Isha">Isha</option>
+          <option value="Anytime">Anytime</option>
+        </select>
+
+        <label for="noteInput">Note (optional)</label>
+        <textarea id="noteInput" rows="3" maxlength="200"></textarea>
+
+        <p id="formMessage" class="message"></p>
+
+        <button type="submit" id="saveBtn">Add Reminder</button>
+        <button type="button" id="cancelBtn" class="hidden">Cancel Edit</button>
+      </form>
+    </section>
+
+    <!-- List of reminders -->
+    <section class="card">
+      <h2>My Reminders</h2>
+      <p id="countText"></p>
+      <p id="listMessage" class="message"></p>
+      <ul id="reminderList"></ul>
+    </section>
+
+  </main>
+
+  <script src="common.js"></script>
+  <script src="reminders.js"></script>
+</body>
+</html>

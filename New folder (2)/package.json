@@ -1,0 +1,21 @@
+{
+  "name": "final_oop",
+  "version": "1.0.0",
+  "description": "SolatTime - aplikasi desktop waktu solat (Electron)",
+  "main": "Main.js",
+  "dependencies": {
+    "ansi-regex": "^4.1.1",
+    "prompt-sync": "^4.2.0",
+    "strip-ansi": "^5.2.0"
+  },
+  "devDependencies": {
+    "electron": "^44.9.0"
+  },
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": ["electron", "prayer-times", "solat"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

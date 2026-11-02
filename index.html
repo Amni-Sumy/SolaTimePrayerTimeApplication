@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SolatTime - Prayer Times</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav>
+    <strong>SolatTime</strong>
+    <a href="index.html" class="active">Prayer Times</a>
+    <a href="reminders.html">My Reminders</a>
+  </nav>
+
+  <main>
+
+    <!-- Search -->
+    <section class="card">
+      <h2>Search City</h2>
+      <input type="text" id="cityInput" value="Klang" placeholder="e.g. Klang, Kuala Lumpur">
+      <button id="searchBtn">Search</button>
+      <p id="errorBox" class="message"></p>
+      <p id="statusBox"></p>
+    </section>
+
+    <!-- Today's information -->
+    <section class="card">
+      <h2 id="cityName">Today</h2>
+      <p>Date: <strong id="dateText">-</strong></p>
+      <p>Hijri date: <strong id="hijriText">-</strong></p>
+      <p>Weather: <strong id="weatherText">-</strong></p>
+      <p>Qibla direction: <strong id="qiblaText">-</strong></p>
+    </section>
+
+    <!-- Prayer times -->
+    <section class="card">
+      <h2>Prayer Times</h2>
+      <ul id="timesList"></ul>
+    </section>
+
+    <!-- Calculation -->
+    <section class="card">
+      <h2>Next Prayer</h2>
+      <p id="nextPrayer" class="big">-</p>
+      <p id="countdown" class="big">--:--:--</p>
+      <p id="nightText"></p>
+    </section>
+
+    <!-- Suggestions -->
+    <section class="card">
+      <h2>Activity Suggestions</h2>
+      <div id="suggestionList"></div>
+    </section>
+
+    <!-- Quran verse -->
+    <section class="card">
+      <h2>Verse of the Moment</h2>
+      <p id="ayahArabic" class="arabic"></p>
+      <p id="ayahEnglish"></p>
+      <p id="ayahRef"></p>
+      <button id="ayahBtn">Another verse</button>
+    </section>
+
+  </main>
+
+  <script src="common.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>

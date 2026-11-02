@@ -1,0 +1,152 @@
+/* styles.css - used by both pages */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f6f4;
+  color: #222;
+}
+
+nav {
+  background: #0b6e4f;
+  padding: 12px 20px;
+  color: white;
+}
+nav a {
+  color: white; 
+  margin-left: 20px;
+  text-decoration: none;
+}
+nav a.active {
+  border-bottom: 2px solid white;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+.card h2 {
+  margin-top: 0;
+  color: #064e3b;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 10px 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+#cityInput {
+  width: 60%;
+}
+
+button {
+  background: #0b6e4f;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+button:hover {
+  background: #064e3b;
+}
+button.delete {
+  background: #b3261e;
+}
+button.small {
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+.message {
+  padding: 0;
+}
+.message.error {
+  color: #b3261e;
+  background: #fdecea;
+  padding: 8px;
+  border-radius: 5px;
+}
+.message.success {
+  color: #064e3b;
+  background: #dff3ea;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.big {
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  margin: 5px 0;
+}
+.arabic {
+  font-size: 26px;
+  text-align: right;
+  direction: rtl;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+#timesList li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #e3e3e3;
+}
+#timesList li.next {
+  background: #fbf1d6;
+  font-weight: bold;
+}
+
+.suggestion {
+  border-left: 4px solid #0b6e4f;
+  background: #f7fbf9;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+}
+.suggestion h3 {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+}
+.suggestion p {
+  margin: 0 0 6px 0;
+}
+
+.reminder {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+}
+.reminder .info {
+  flex: 1;
+}
+.reminder.done .title {
+  text-decoration: line-through;
+  color: gray;
+}
+.reminder input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
