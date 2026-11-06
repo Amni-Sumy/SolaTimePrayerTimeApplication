@@ -38,7 +38,7 @@ const ayahBtn = document.getElementById("ayahBtn");
 
 // ---------- Data kept while the app is open ----------
 const prayerNames = ["Fajr", "Sunrise", "Dhuhr", "Asr", "Maghrib", "Isha"];
-let prayerTimes = null;   // e.g. { Fajr: "05:50", Sunrise: "07:00", ... }
+let prayerTimes = null;   // Fajr: "05:50", Sunrise: "07:00", ... 
 let prayerSeconds = null; // same times, but in seconds since midnight
 let weather = null;       // { temp: 30, text: "Rain", group: "rain" }
 
@@ -118,7 +118,7 @@ async function loadPrayerTimes(place) {
     const url = TIMINGS_URL + todayForApi() +
       "?latitude=" + place.latitude +
       "&longitude=" + place.longitude +
-      "&method=17" +                                  // 17 = JAKIM (Malaysia)
+      "&method=17" + // 17 = JAKIM (Malaysia)
       "&timezonestring=" + encodeURIComponent(place.timezone);
     const json = await getJson(url);
 
